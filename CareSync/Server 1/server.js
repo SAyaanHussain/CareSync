@@ -2,7 +2,7 @@ const express = require('express');
 const bcrypt = require("bcrypt");
 const cors = require('cors');
 const session = require('express-session');
-const stripe = require('stripe')('sk_test_51P4TSoSFPrVdKBVbmjp9LASNKS33nvJlYFF5lrve0DX2ld9rKePslNPDZZW21aH0MyFfeGpDv0WAuWRgMsMpeV9000LM8mZYSC');
+const stripe = require('stripe')('KEY');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const app = express();
@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 function connectWithRetry() {
     console.log('Connecting to MongoDB...');
-    return mongoose.connect('mongodb+srv://aishahussain13579:a9831122132@adainsta.tfexlrz.mongodb.net/CareSync')
+    return mongoose.connect('M')
         .then(() => console.log('Connected to MongoDB'))
         .catch((err) => {
             console.error('Could not connect to MongoDB:', err.message);
