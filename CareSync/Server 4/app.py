@@ -7,7 +7,7 @@ import ssl
 import logging
 
 app = Flask(__name__)
-openai.api_key = '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'
+openai.api_key = 'sk-KEY'
 
 # Create a custom SSL context that does not verify certificates
 ssl_context = ssl.create_default_context()
@@ -16,7 +16,7 @@ ssl_context.verify_mode = ssl.CERT_NONE
 
 # Connect to MongoDB with custom SSL context
 try:
-    client = MongoClient('mongodb+srv://aishahussain13579:a9831122132@adainsta.tfexlrz.mongodb.net/CareSync', tls=True, tlsAllowInvalidCertificates=True)
+    client = MongoClient('DATABASE', tls=True, tlsAllowInvalidCertificates=True)
     db = client['CareSync']
     collection = db['fitness_plans']
     logging.info("Connected to MongoDB successfully.")
