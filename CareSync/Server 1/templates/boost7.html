@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Mood Booster | CareSync</title>
+    <style>
+        body {
+            font-family: 'Lora', sans-serif;
+            background-color: #CC8899;
+            color: black;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            animation: fadeIn 1.5s forwards;
+        }
+        h1 {
+            margin-left: 100px;
+            font-size: 65px;
+            margin-top: 50px;
+        }
+        .question {
+            margin-left: 100px;
+            margin-top: 20px;
+            font-size: 25px;
+
+        }
+        .options {
+            margin-left: 120px;
+        }
+        .option {
+            margin-bottom: 10px;
+        }
+        .submit-button {
+            margin-left: 20px;
+            margin-top: 80px;
+        }
+        .option{
+            background-color: rgba(0,0,0,0);
+            border: 0.8px solid black;
+            width:700px;
+            padding:20px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        input{
+            cursor: pointer;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Gratitude Check</h1>
+    <br>
+    <br>
+    <br?
+    <p class="question" style="display: block; margin-left:30%;">7. What’s one thing you’re grateful for today?</p>
+    
+    <div class="options">
+        <div class="option">
+            <input type="radio" id="highlight1" name="highlight" value="something made me laugh out loud">
+            <label for="highlight1">A supportive friend or family member.</label>
+        </div>
+        <div class="option">
+            <input type="radio" id="highlight2" name="highlight" value="I got to enjoy a delicious treat">
+            <label for="highlight2">A pleasant surprise or treat.</label>
+        </div>
+        <div class="option">
+            <input type="radio" id="highlight3" name="highlight" value="I accomplished something I was working on">
+            <label for="highlight3">A personal achievement or positive moment.</label>
+        </div>
+        <div class="option">
+            <input type="radio" id="highlight4" name="highlight" value="I’m still waiting for a highlight">
+            <label for="highlight4">I’m having trouble finding something right now.</label>
+        </div>
+    </div>
+
+    <div class="submit-button">
+        <a href="/msg"><button class="btn btn-dark" id="submit">Submit</button></a>
+    </div>
+</body>
+</html>

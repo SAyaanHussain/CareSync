@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>User Badges | CareSync</title>
+    <style>
+        body{
+            background-color:black;
+            font-family: 'Merriweather Sans', sans-serif;
+            color:white;
+        }
+        h1{
+            text-align: center;
+        }
+        .badge-image {
+            height: 200px;
+            width:200px;
+            margin-left:30px;
+            display: block;
+            cursor: pointer;
+
+            border-radius: 25px;
+        }
+        .badges{
+            display: flex;
+            flex-wrap:wrap;
+            flex-direction: row;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <h1>User Badges</h1>
+    <br>
+    <br>
+    <br>
+    <div class="badges">
+        <% if (badges.length > 0) { %>
+                <% badges.forEach(function(badge) { %>
+                        <% if (badge === "Burning Machine, 2024") { %>
+                            <img src="/badge1.png" alt="Burning Machine" class="badge-image">
+
+                        <% } else if (badge === "Pedal Power Pro") { %>
+                            <img src="/cycle.png" alt="Pedal Power Pro" class="badge-image">
+                            
+                        <% } else if (badge === "Aqua Achiever") { %>
+                            <img src="/swim.png" alt="Aqua Achiever" class="badge-image">
+                            
+                        <% } else if (badge === "Earth Steward") { %>
+                            <img src="/earth.png" alt="Earth Steward" class="badge-image" style="border-radius: 80px; width:220px;">
+                           
+                        <% } else if (badge === "Nourishment Navigator") { %>
+                            <img src="/meal.png" alt="Nourishment Navigator" class="badge-image">
+                            
+                        <% } else if (badge === "Digital Detoxifier") { %>
+                            <img src="/dd.png" alt="Digital Detoxifier" class="badge-image">
+                            
+                        <% } else if (badge === "Fitness Fanatic") { %>
+                            <img src="/gamer.png" alt="Fitness Fanatic" class="badge-image">
+                            
+                        <% } else if (badge === "Flexibility Flyer") { %>
+                            <img src="/yoga.png" alt="Flexibility Flyer" class="badge-image">
+                            
+                        <% } else if (badge === "Dancing Queen/King") { %>
+                            <img src="/dance.png" alt="Dancing Queen/King" class="badge-image">
+                            
+                        <% } %>
+                <% }) %>
+        <% } else { %>
+            <p>No badges earned yet.</p>
+        <% } %>
+    </div>
+
+</body>
+</html>
